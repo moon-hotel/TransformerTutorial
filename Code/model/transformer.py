@@ -1,7 +1,8 @@
-
 import torch.nn as nn
 import copy
 import torch
+from torch.nn.init import xavier_uniform_
+from .attention import MyMultiheadAttention
 
 
 
