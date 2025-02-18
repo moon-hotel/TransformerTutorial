@@ -33,3 +33,21 @@ if __name__ == '__main__':
         print(tgt_out.transpose(0, 1)[:3])
         print("tgt_mask shape (tgt_len,tgt_len): ", tgt_mask.shape)
         break
+
+# src shape： torch.Size([15, 5])
+# tensor([[10, 33,  7, 34, 35, 36, 37, 38, 39, 40, 11, 41,  8, 42,  4],
+#         [10, 27, 28, 29,  7,  8, 30, 31, 32,  4,  1,  1,  1,  1,  1],
+#         [ 9,  6, 43, 44, 45, 11, 46, 47, 48,  4,  1,  1,  1,  1,  1]])
+# tgt shape: torch.Size([17, 5])
+# src input shape: torch.Size([15, 5])
+# src_padding_mask shape (batch_size, src_len):  torch.Size([5, 15])
+# tgt input shape: torch.Size([16, 5])
+# tensor([[ 2, 11, 33, 10,  5, 34, 35, 36, 37, 38,  5, 39, 40,  5, 41,  4],
+#         [ 2, 11, 27, 28, 29, 30,  5, 31, 32,  4,  3,  1,  1,  1,  1,  1],
+#         [ 2,  8,  9,  7, 42, 43, 44, 45, 46,  4,  3,  1,  1,  1,  1,  1]])
+# tgt_padding_mask shape: (batch_size, tgt_len)  torch.Size([5, 16])
+# tgt output shape: torch.Size([16, 5])
+# tensor([[11, 33, 10,  5, 34, 35, 36, 37, 38,  5, 39, 40,  5, 41,  4,  3],
+#         [11, 27, 28, 29, 30,  5, 31, 32,  4,  3,  1,  1,  1,  1,  1,  1],
+#         [ 8,  9,  7, 42, 43, 44, 45, 46,  4,  3,  1,  1,  1,  1,  1,  1]])
+# tgt_mask shape (tgt_len,tgt_len):  torch.Size([15, 15])
