@@ -87,8 +87,9 @@ def build_vocab(tokenizer, filepath, specials=None, min_freq=1):
     print(vocab.stoi['are'])  # 通过单词返回得到词表中对应的索引
     """
     counter = Counter()
+    logging.info(f"# 正在构建词表: {filepath}")
     with open(filepath, encoding='utf8') as f:
-        for string_ in f:
+        for string_ in tqdm(f):
             counter.update(tokenizer(string_))
         return Vocab(counter, specials,min_freq=min_freq)
 
