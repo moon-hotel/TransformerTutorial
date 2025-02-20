@@ -18,7 +18,7 @@ class Config():
                                       os.path.join(self.dataset_dir, 'val.en')]  # 验证时解码器的输入
         self.test_corpus_file_paths = [os.path.join(self.dataset_dir, 'test_2016_flickr.de'),
                                        os.path.join(self.dataset_dir, 'test_2016_flickr.en')]
-        self.min_freq = 1  # 在构建词表的过程中滤掉词（字）频小于min_freq的词（字）
+        self.min_freq = 5  # 在构建词表的过程中滤掉词（字）频小于min_freq的词（字）
 
         #  模型相关配置
         self.batch_size = 128
