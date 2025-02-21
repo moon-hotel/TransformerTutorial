@@ -1,5 +1,7 @@
-from copy import deepcopy
+import sys
 
+sys.path.append('../')
+from copy import deepcopy
 from config import Config
 from model import TranslationModel
 from model import CustomSchedule
@@ -9,7 +11,6 @@ import torch
 import time
 import os
 import logging
-
 
 
 def accuracy(logits, y_true, PAD_IDX):
@@ -136,7 +137,6 @@ if __name__ == '__main__':
     config = Config()
     train_model(config)
 
-
 # [2025-02-20 22:19:35] - INFO: ############初始化模型############
 # [2025-02-20 22:19:36] - INFO: Epoch: 0, Batch[0/8], Train loss :5.954, Train acc: 0.0010863661053775121
 # [2025-02-20 22:19:36] - INFO: Epoch: 0, Batch[1/8], Train loss :5.954, Train acc: 0.004441976679622432
@@ -233,4 +233,3 @@ if __name__ == '__main__':
 # [2025-02-20 22:19:39] - INFO: Epoch: 9, Batch[6/8], Train loss :5.704, Train acc: 0.04538087520259319
 # [2025-02-20 22:19:39] - INFO: Epoch: 9, Batch[7/8], Train loss :5.702, Train acc: 0.06476997578692494
 # [2025-02-20 22:19:39] - INFO: Epoch: 9, Train loss: 5.713, Epoch time = 0.231s
-

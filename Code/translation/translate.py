@@ -1,6 +1,10 @@
-from config.config import Config
-from model.TranslationModel import TranslationModel
-from utils.data_helpers import LoadEnglishGermanDataset, my_tokenizer
+import sys
+
+sys.path.append('../')
+from config import Config
+from model import TranslationModel
+from utils import LoadEnglishGermanDataset
+from utils import  my_tokenizer
 import torch
 
 
