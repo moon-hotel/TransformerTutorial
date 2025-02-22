@@ -5,6 +5,7 @@ from .transformer import MyTransformerDecoderLayer
 from .transformer import MyTransformerDecoder
 from .transformer import MyTransformer
 from .TranslationModel import TranslationModel
+from .CoupletModel import CoupletModel
 from .learning_rate import CustomSchedule
 
 __all__ = ['MyMultiheadAttention',
@@ -14,4 +15,5 @@ __all__ = ['MyMultiheadAttention',
            'MyTransformerDecoder',
            'MyTransformer',
            'TranslationModel',
-           'CustomSchedule']
+           'CustomSchedule',
+           'CoupletModel']
